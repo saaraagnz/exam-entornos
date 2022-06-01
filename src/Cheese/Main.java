@@ -1,8 +1,8 @@
 /*
-*	grupo  :
-*	alumno :
-*	n.exp. :
-*	fecha  :
+*	grupo  : 1º GDAM
+*	alumno : Sara González Alfageme
+*	n.exp. : 7240
+*	fecha  : 01/06/2022
  */
 package Cheese;
 
