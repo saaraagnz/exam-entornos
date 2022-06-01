@@ -43,6 +43,11 @@ public class ListaProductos {
         if (campo.replace(" ","") == "")  return true; else return false;
     }
 
+    /**
+     * Añade un producto y comprueba que no esté duplicado
+     * @param prod producto a añadir
+     * @return Devuelve null si esta repetido y devuelve el producto si no está repetido
+     */
     public Producto addProducto(Producto prod) {
         
         if (listaP.containsKey(prod.getcode())) {
@@ -55,6 +60,11 @@ public class ListaProductos {
         return prod;
     }
 
+    /**
+     * Elimina el producto que trenga x codigo
+     * @param codigo codigo que tendrá el producto
+     * @return Devuelve el producto borrado de la lista
+     */
     public Producto eliminarProducto(String codigo) { 
         
         Producto prod = buscarProducto(codigo);
@@ -66,6 +76,11 @@ public class ListaProductos {
         return prod;
     }
 
+    /** 
+     * Este metodo busca un producto en la lista de productos con un codigo
+     * @param codigo codigo que tendrá el producto
+     * @return Si el producto está en la lista lo devuelve, y si no está, genera en la lista el codigo
+     */
     public Producto buscarProducto(String codigo) { 
         Producto prod = null;
         
@@ -77,12 +92,20 @@ public class ListaProductos {
         }
     }
 
+    /**
+     * Este es el array donde se guardan todos los productos
+     * @return Devuelve todos los productos de la lista
+     */
     public ArrayList<Producto> getProductos() {
         ArrayList<Producto> prodsList = new ArrayList<>();
         prodsList.addAll(listaP.values());
         return prodsList;
     }
     
+    /**
+     * Este metodo cuenta todos los productos que hay en la lista
+     * @return Devuelve el numero total de productos que hay en la lista.
+     */
     public int totalProductos(){
             return this.getN();
     }
